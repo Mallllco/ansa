@@ -23,11 +23,10 @@ axios.get('https://www.ansa.it/')
             return article.includes(choice);
         });
         
-        fs.writeFile('./artocoli.txt', articles.join('\n'), (error => {
+        fs.writeFile('./articoli.txt', articles.join('\n'), (error => {
             if (error) throw error;
         }));
     })
 .catch((error) =>{
     console.log(error);
 });
-
